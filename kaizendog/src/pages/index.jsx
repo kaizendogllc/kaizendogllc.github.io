@@ -35,10 +35,10 @@ const Corporate = ({ url }) => (
 
     <Navbar />
     <Welcome name="" />
-    <Offer name="services" />
-    <Goals name="goals" />
     <Mission name="mission" />
-    <Contact name="contact" />
+    <Offer name="services" />
+    {/* <Goals name="goals" /> */}
+    {/* <Contact name="contact" /> */}
     <Copyright />
   </Theme>
 );

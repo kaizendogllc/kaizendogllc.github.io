@@ -33,21 +33,21 @@ export default {
   navbar: {
     links: [
       {
-        to: 'services',
-        label: 'Services',
-      },
-      {
-        to: 'goals',
-        label: 'Goals',
-      },
-      {
         to: 'mission',
         label: 'Mission',
       },
+      // {
+      //   to: 'goals',
+      //   label: 'Goals',
+      // },
       {
-        to: 'contact',
-        label: 'Contact',
+        to: 'services',
+        label: 'Services',
       },
+      // {
+      //   to: 'contact',
+      //   label: 'Contact',
+      // },
     ],
     actions: [],
   },
@@ -70,26 +70,26 @@ export default {
     ],
   },
   offer: {
-    subtitle: 'What we do',
+    // subtitle: 'What we do',
     title: 'Services',
     services: [
       {
         icon: Consulting,
         title: 'Custom Software Solutions',
         text:
-          'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+          '',
       },
       {
         icon: Auditing,
         title: 'DevOps',
         text:
-          'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+          '',
       },
       {
         icon: Strategy,
         title: 'Monitoring, Compliance, Security',
         text:
-          'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+          '',
       },
     ],
   },
@@ -101,31 +101,31 @@ export default {
     subtitle: 'We stay focus on targets',
     title: 'Our goals',
     text:
-      'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam commodo eu justo in posuere. Sed elementum, ipsum eu faucibus porta, odio mauris posuere quam, eu cursus tellus est et lacus. Aenean maximus velit ac malesuada ultricies. Vestibulum magna leo, convallis non elit ac, hendrerit sollicitudin tellus.',
-    cta: {
-      children: 'Read about our mission',
-      href:
-        'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-      target: '_blank',
-      as: 'a',
-    },
+      '',
+    // cta: {
+    //   children: 'Read about our mission',
+    //   href:
+    //     'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
+    //   target: '_blank',
+    //   as: 'a',
+    // },
   },
   mission: {
     img: {
       src: Mission,
       srcSet: `${Mission} 1x, ${Mission2x} 2x`,
     },
-    subtitle: 'Wha we’re dedicated to',
+    // subtitle: 'Wha we’re dedicated to',
     title: 'Our mission',
     text:
-      'Proin sed pharetra ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam commodo eu justo in posuere. Sed elementum, ipsum eu faucibus porta, odio mauris posuere quam, eu cursus tellus est et lacus. Aenean maximus velit ac malesuada ultricies. Vestibulum magna leo, convallis non elit ac, hendrerit sollicitudin tellus.',
-    cta: {
-      children: 'See what we offer',
-      href:
-        'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-      target: '_blank',
-      as: 'a',
-    },
+      '',
+    // cta: {
+    //   children: 'See what we offer',
+    //   href:
+    //     'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
+    //   target: '_blank',
+    //   as: 'a',
+    // },
   },
   supportCta: {
     subtitle: 'World class support',

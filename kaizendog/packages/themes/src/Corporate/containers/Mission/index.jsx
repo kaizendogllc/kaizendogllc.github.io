@@ -40,7 +40,7 @@ const Mission = ({
           <Typography {...SubtitleProps}>{subtitle}</Typography>
           <Typography {...TitleProps}>{title}</Typography>
           <Typography {...TextProps}>{text}</Typography>
-          <Button {...CtaProps} {...cta} />
+          {/* <Button {...CtaProps} {...cta} /> */}
         </Fade>
       </Box>
     </Container>
