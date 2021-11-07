@@ -218,7 +218,7 @@ Newsletter.defaultProps = {
     mx: "auto",
     mt: 4,
     flexDirection: {
-      _: "row",
+      _: "column",
       md: "column",
     },
   },
