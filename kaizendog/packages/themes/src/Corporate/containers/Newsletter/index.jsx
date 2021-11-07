@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import Fade from "react-reveal/Fade";
@@ -37,35 +37,46 @@ const Newsletter = ({
   descriptionPlaceholder,
   LiquidComponent,
 }) => {
-  const sendEmail = () => {
-    console.log("send email");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
 
-    const first_name = "first";
-    const last_name = "last";
-    const email = "me@kaizendog.com";
-    const notes = "Looking for stuff";
-    const phone = "123";
-    emailjs
-      .send(
-        "service_hxnubar",
-        "template_mo7z1xx",
-        {
-          first_name,
-          last_name,
-          email,
-          notes,
-          phone,
-        },
-        "user_5TMIyuF55QUKIeB22dujF"
-      )
-      .then(
-        (result) => {
-          console.log("success", result.text);
-        },
-        (error) => {
-          console.log("error", error.text);
-        }
-      );
+  const [emailSent, setEmailSent] = useState(false);
+
+  const sendEmail = () => {
+    const formData = {
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      notes: description,
+      phone,
+    };
+
+    setEmailSent(true);
+
+    // emailjs
+    //   .send(
+    //     "service_hxnubar",
+    //     "template_mo7z1xx",
+    //     {
+    //       first_name,
+    //       last_name,
+    //       email,
+    //       notes,
+    //       phone,
+    //     },
+    //     "user_5TMIyuF55QUKIeB22dujF"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log("success", result.text);
+    //     },
+    //     (error) => {
+    //       console.log("error", error.text);
+    //     }
+    //   );
   };
 
   return (
@@ -80,26 +91,37 @@ const Newsletter = ({
               <Box {...FormProps}>
                 <Input
                   name="firstName"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                   {...InputProps}
                   placeholder={firstNamePlaceholder}
                 />
                 <Input
                   name="lastName"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                   {...InputProps}
                   placeholder={lastNamePlaceholder}
                 />
                 <Input
                   name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   {...InputProps}
                   placeholder={inputPlaceholder}
                 />
                 <Input
                   name="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   {...InputProps}
                   placeholder={phonePlaceholder}
                 />
                 <Input
                   name="description"
+                  multiline={true}
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                   {...InputProps}
                   placeholder={descriptionPlaceholder}
                 />
