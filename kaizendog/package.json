@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "3.2.30",
     "gatsby-plugin-portal": "1.0.7",
     "gatsby-plugin-react-helmet": "3.3.12",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sharp": "2.6.38",
     "gatsby-plugin-styled-components": "3.3.12",
     "gatsby-source-filesystem": "2.3.32",
@@ -33,6 +34,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "deploy": "gatsby-plugin-s3 deploy",
     "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop",
     "now-dev": "gatsby develop -p $PORT --prefix-paths",

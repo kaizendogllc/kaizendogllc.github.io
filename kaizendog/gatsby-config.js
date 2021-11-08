@@ -1,15 +1,23 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: 'Pagerland Gatsby',
-    description: '',
-    author: 'Pagerland Team',
+    title: "KaizenDog, LLC",
+    description: "",
+    author: "KaizenDog, LLC",
   },
-  pathPrefix: process.env.GATSBY_APP_DIR || '',
+  pathPrefix: process.env.GATSBY_APP_DIR || "",
   plugins: [
     {
-      resolve: 'gatsby-plugin-no-sourcemaps',
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.kaizendog.com",
+        generateRoutingRules: false,
+        acl: null,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-no-sourcemaps",
     },
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -20,30 +28,30 @@ module.exports = {
     {
       resolve: `gatsby-plugin-portal`,
       options: {
-        key: 'portal',
-        id: 'portal',
+        key: "portal",
+        id: "portal",
       },
     },
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
+        name: "gatsby-starter-default",
+        short_name: "starter",
+        start_url: "/",
         background_color: `#189AB4`,
         theme_color: `#189AB4`,
-        display: 'minimal-ui',
-        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        display: "minimal-ui",
+        icon: "src/images/icon.png", // This path is relative to the root of the site.
       },
     },
     {
@@ -53,6 +61,6 @@ module.exports = {
         head: false,
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
   ],
 };
