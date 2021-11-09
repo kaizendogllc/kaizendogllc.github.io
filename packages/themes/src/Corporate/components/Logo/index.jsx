@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { base } from '@pagerland/common/src/utils';
-import logo from '../../assets/KaizenDog-logos/KaizenDog-logos-crop.jpg';
+import logo from '../../assets/KaizenDog-logos/kaizendog-logo-white.png';
 
 const Svg = styled.svg`
   display: block;
